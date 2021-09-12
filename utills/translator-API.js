@@ -25,11 +25,12 @@ const params2 = {
 const translateAPI = async (comment, source, target) => {
   let arr = [];
 
-if (source.value === 'en'){
+if (source.value === "en"){
   const params = {
     text: `${comment}`,
-    modelId: `${source.value}-${target.value}`,
+    modelId: `en-${target.value}`,
   };
+
   await languageTranslator.translate(params).then((response) => {
     arr.push(response.result.translations[0].translation);
   });
