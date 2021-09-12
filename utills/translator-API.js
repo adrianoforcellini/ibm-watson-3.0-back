@@ -24,3 +24,16 @@ languageTranslator.translate(params)
   .catch(err => {
     console.log('error:', err);
   });
+
+  languageTranslator.listLanguages()
+  .then(languages => {
+    const arrOfLanguages = languages.result.languages;
+    // console.log(JSON.stringify(arrOfLanguages, null, 2));
+    console.log(arrOfLanguages.map((item) => item.language +" " + item.language_name))
+  })
+  .catch(err => {
+    console.log('error:', err);
+  });
+
+
+
