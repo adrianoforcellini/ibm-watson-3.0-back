@@ -3,7 +3,7 @@ const axios = require("axios");
 
 const getAll = async (_req, res) => {
   const { data } = await axios.get(
-    "https://uj5tbktjfh.execute-api.us-east-1.amazonaws.com/dev/comments"
+    "https://iisniidwo9.execute-api.us-east-1.amazonaws.com/dev/comments"
   );
   if (data){
       res.status(200).send(data.ById);
