@@ -8,6 +8,7 @@ const bodyParser = require('body-parser');
 const insert = require("./models/insert");
 const getAll = require("./models/getAll");
 const postWatson = require("./models/postWatson");
+const traslator = require("./models/translator");
 
 app.use(express.json());
 app.use(cors());
@@ -20,6 +21,8 @@ app.get("/", (_req, res) => res.send('on'));
 app.post("/comments", insert);
 
 app.post("/watson", postWatson);
+
+app.post("/translator", traslator)
 
 const PORT = 3001;
 http.listen(process.env.PORT || PORT, () =>

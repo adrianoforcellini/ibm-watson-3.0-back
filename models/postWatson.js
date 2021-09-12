@@ -1,4 +1,4 @@
-const synthesizeAudio = require('../utills/watsonAPI');
+const synthesizeAudio = require('../utills/text-to-speech-API');
 
 const postWatson = async (req, res) => {
   const {id, comment} =  req.body;
