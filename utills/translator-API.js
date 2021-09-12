@@ -35,14 +35,13 @@ const translateAPI = async (comment, source, target) => {
   });
   if (target.value === "en") {
     return arr[0];
-  } else {
+  } 
     params2.text = arr[0];
     params2.modelId = `en-${target.value}`;
     await languageTranslator.translate(params2).then((response) => {
       arr.push(response.result.translations[0].translation);
     });
     return arr[1];
-  }
 };
 
 // languageTranslator.listLanguages()
