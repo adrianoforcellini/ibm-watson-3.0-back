@@ -8,7 +8,7 @@ const translator = async (req, res) => {
 
   const translate = await translatorAPI(comment, source, target, commentId);
    insert(commentId, translate);
-   postWatson(comment,value, commentId);
+   postWatson(translate,value, commentId);
    res.status(200).send(translate);
 };
 
